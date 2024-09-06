@@ -15,9 +15,9 @@
       <div class="flex flex-col">
         <!--LOGO (div izquierda)-->
 
-        <div class="w-full justify-center items-center">
+        <div class="w-full flex justify-center items-center mt-5">
           <img
-            src="/images/logoMBSalon.jpg"
+            src="/images/logoBueno.jpeg"
             class=""
             alt="Imagen del logo y titulo"
           />
@@ -59,20 +59,21 @@
               <div class="flex justify-center p-4">
                 <button type="submit"
                   class="sm:w-60 w-fit bg-[#E90074] p-4 rounded-xl text-white text-xl hover:bg-red-950 transition-colors ease-in-out duration-[400ms]">
-                  <a href="/templates/index.html">Iniciar sesión</a>
+                  Iniciar sesión
                 </button>
               </div>
               <a class="flex justify-center sm:text-2xl text-lg whitespace-nowrap p-auto py-5 hover:underline" href="/templates/loginAdmin.html">Registrar nuevo usuario </a>
 
             </form>
             <script>
+              
               document.getElementById("loginForm").addEventListener("submit", function(event){
                   event.preventDefault();
       
                   const email = document.getElementById("correo").value;
                   const password = document.getElementById("contraseña").value;
       
-                  fetch("/login", {
+                  fetch("http://localhost:3000/login", {
                       method: "POST",
                       headers: {
                           "Content-Type": "application/json"
@@ -82,7 +83,8 @@
                   .then(response => response.json())
                   .then(data => {
                       if (data.success) {
-                          alert("Login exitoso");
+                          localStorage.setItem("success",data.success);
+                          window.location.assign("/templates/index.html");
                       } else {
                           alert("Credenciales incorrectas");
                       }
