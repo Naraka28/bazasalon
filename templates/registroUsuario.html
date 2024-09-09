@@ -35,14 +35,13 @@
             <h1 class="flex sm:text-semibold justify-left md:text-xl sm:text-3xl text-xl text-black whitespace-nowrap">
               General
             </h1>
-            <form class="mt-4" action="POST">
-                
+            <form id="registrarForm" class="mt-4" method="POST">
                  
               <div class="relative w-full mx-auto my-auto">
-                <input
+                <input id="nombre" maxlength="128" 
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder="" required
-                />
+                >
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
                 >
@@ -50,10 +49,10 @@
                 </label>
               </div>
               <div class="relative w-full mx-auto my-auto">
-                <input
+                <input id="apellido" maxlength="128" 
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder="" required
-                />
+                >
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
                 >
@@ -61,12 +60,13 @@
                 </label>
               </div>
               <div class="relative w-full mx-auto my-auto">
-                <select
+                <select id="rol"
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder="" required
                 >
-                <option value="1">Administrador</option>
                 <option value="2">Empleado</option>
+                <option value="1">Administrador</option>
+                
                 </select>
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
@@ -75,10 +75,10 @@
                 </label>
               </div>
               <div class="relative w-full mx-auto my-auto">
-                <input
+                <input type="email" id="correo_personal" maxlength="256" 
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder="" required
-                />
+                >
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
                 >
@@ -86,10 +86,10 @@
                 </label>
               </div>
               <div class="relative w-full mx-auto my-auto">
-                <input
+                <input id="celular" type="tel" pattern="\d{10}" minlength="10" maxlength="10" onkeypress="return valideKey(event);"
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder="" required
-                />
+                >
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
                 >
@@ -101,21 +101,21 @@
                 Información de acceso
               </h1>
               <div class="relative w-full mx-auto my-auto">
-                <input
+                <input type="email" id="correo_acceso" maxlength="128"
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder="" required
-                />
+                >
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
                 >
-                  Correo
+                  Correo Acceso
                 </label>
               </div>
               <div class="relative w-full mx-auto my-auto">
-                <input type="password"
+                <input type="password" id="contraseña"
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder=""
-                />
+                >
                 <label
                   class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-base text-lg peer-focus:text-lg before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
                 >
@@ -123,7 +123,7 @@
                 </label>
               </div>
               <div class="relative w-full mx-auto my-auto">
-                <input type="password"
+                <input type="password" id="contraseña_confirmar"
                   class="peer w-full h-full mb-6 bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-gray-400 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
                   placeholder=""
                 />
@@ -135,9 +135,9 @@
               </div>
               
               <div class="flex justify-center p-4">
-                <button
+                <button type="submit" id="registerBtn"
                   class="sm:w-60 w-fit bg-[#E90074] p-4 rounded-xl text-white text-xl hover:bg-red-950 transition-colors ease-in-out duration-[400ms]">
-                  Entrar
+                  Registrar
                 </button>
               </div>
 
@@ -155,5 +155,87 @@
       </div>
     </div>
     <!-- fin div padre-->
+
+    <!-- script JS -->
+    <script>
+      function valideKey(evt) {
+      var code = (evt.which) ? evt.which : evt.keyCode;
+
+      if (code == 8) {
+        return true;
+      } else if (code >= 48 && code <= 57) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    
+      document.getElementById("registrarForm").addEventListener("submit", function(event){
+          event.preventDefault();
+
+          
+
+          const nombre = document.getElementById("nombre").value;
+          const apellido = document.getElementById("apellido").value;
+          const rol = document.getElementById("rol").value;
+          const correo_personal = document.getElementById("correo_personal").value;
+          const celular = document.getElementById("celular").value;
+          const correo_acceso = document.getElementById("correo_acceso").value;
+          const contraseña = document.getElementById("contraseña").value;
+          const contraseña_confirmar = document.getElementById("contraseña_confirmar").value;
+
+          //const email = document.getElementById("correo").value;
+          //const password = document.getElementById("contraseña").value;
+
+              // Validar si las contraseñas coinciden
+        if (contraseña !== contraseña_confirmar) {
+          alert("Las contraseñas no coinciden");
+          event.preventDefault
+          
+        }
+
+        if (celular.length !== 10) {
+          alert('Número de celular debe tener 10 dígitos');
+          event.preventDefault();
+        }
+
+
+    // Crear objeto con los datos del formulario
+    const formData = {
+      nombre: nombre,
+      apellido: apellido,
+      rol: rol,
+      correo_personal: correo_personal,
+      celular: celular,
+      correo_acceso: correo_acceso,
+      contraseña: contraseña,
+    };
+
+    // Realizar la solicitud POST al servidor usando fetch
+    fetch("http://localhost:3000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData), // Convertir objeto a JSON
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert("Registro exitoso, redirigiendo...");
+          window.location.href = "login.html";
+
+        } else {
+          alert("Error al registrar");
+        }
+      })
+      .catch((error) => {
+        console.error("Error en la solicitud:", error);
+        alert("Ocurrió un error al registrar el usuario.");
+      });;
+  });
+         
+  </script>
+
   </body>
 </html>
